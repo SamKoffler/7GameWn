@@ -1,0 +1,23 @@
+import random
+
+seriesA = 0
+seriesB = 0
+
+for i in range(1000000):
+    A_wins = 1
+    B_wins = 0
+    while A_wins!=4 and B_wins!=4:
+        x = random.randint(1,2)
+        if x==1:
+            A_wins+=1
+        else:
+            B_wins+=1
+    
+    if A_wins==4:
+        #print("A wins", A_wins, "-", B_wins)
+        seriesA+=1
+    else:
+        #print("B wins", B_wins, "-", A_wins)
+        seriesB+=1
+
+print("A - B series wins:", seriesA, "-", seriesB)
